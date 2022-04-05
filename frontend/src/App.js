@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from "react";
 import './App.css';
+import './components/Dashboard'
+import Dashboard from './components/Dashboard';
+import { Route, Routes } from "react-router-dom";
+import axios from 'axios';
 
 function App() {
+  const [exercises, setExercises] = useState(null);
+
+
+  
+
+
+//getting all exercises
+  const getExercises = async () => {
+    await axios.get('/exercise')
+      .then(res => {
+        setExercises(res.data.exercises)
+      })
+      .catch(err => {
+        console.log('failed to exercises', err)
+      })
+  }
+
+  useState(() => {
+    getExercises()
+  }, [])
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<Routes>
+<Route path="/" element={ <Dashboard exercises={exercises} getExercises={getExercises}  /> } />
+</Routes>
     </div>
   );
 }

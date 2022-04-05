@@ -20,9 +20,10 @@ const mainLoop = async () => {
     app.use('/exercise', exerciseRouter)
     app.use('/sets', setsRouter)
 
+    const PORT = 8080
 
-app.listen(8000, () => {
-  console.log('Server is up on 8000')
+app.listen(PORT, () => {
+  console.log(`Server is up on ${PORT}`)
 })
 
   } catch(err) {

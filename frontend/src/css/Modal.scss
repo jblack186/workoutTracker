@@ -1,0 +1,54 @@
+.modal {
+
+  &__header {
+
+    span {
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+
+  &__show {
+        height: 55vh;
+    overflow-y: scroll;
+
+  }
+
+  &__list {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  
+    &__images {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+      cursor: pointer;
+
+      }
+    }
+  }
+
+  input {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid gray;
+  }
+
+  button {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer
+  }
+
+
+}
