@@ -10,6 +10,8 @@ cd into /server and run `npm run magic` --> This will install the dependencies f
 
 If you kill the terminal and wish to re-run the project after dependencies have been intalled run `npm run dev` to run front and backend scripts without re-installing dependencies
 
+The frontend will run on `localhost:3000` and the backend on `localhost:8080`
+
 This app was built with React, Nodejs, Express, Sqlite, Typeorm and SASS.
 
 
