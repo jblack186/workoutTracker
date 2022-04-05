@@ -11,7 +11,7 @@
     "client-dependencies": "npm install --prefix ../frontend",
     "client": "npm start --prefix ../frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "magic": "concurrently \"npm run server-dependencies\" \"npm run client-dependencies\" \"npm run dev\""
+    "magic": "npm install && npm run client-dependencies && npm run dev"
   },
   "keywords": [],
   "author": "",
