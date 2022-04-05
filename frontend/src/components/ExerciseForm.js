@@ -65,7 +65,7 @@ function ExerciseForm(props) {
 
   return (
     <div className="form-container">
-      <h3 className="form-container__header">{!props.isEdit ? "Create Exercise" : `Edit ${props.isEdit && props.exercise && props.exercise.name} exercise`}<span> {props.isEdit && props.exercise && props.exercise.type.toLowerCase()}</span></h3>
+      <h3 className="form-container__header">{!props.isEdit ? "Create Exercise" : `Editing ${props.isEdit && props.exercise && props.exercise.name} exercise`}<span> {props.isEdit && props.exercise && props.exercise.type.toLowerCase()}</span></h3>
       <p>{props.yes}</p>
       <form
         className="form"
