@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../css/Form.scss";
 import axios from "axios";
 
@@ -39,9 +39,9 @@ const EditSetForm = (props) => {
   };
 
   return (
-    <div>
+    <div className="edit-form">
       <h3>Edit set</h3>
-      <p>Click values edit</p>
+      <strong><h4 className="edit-form__text">Click values edit</h4></strong>
       {props.currSet ? (
         <div>
           <p

@@ -1,7 +1,5 @@
 .modal {
-
   &__header {
-
     span {
       font-size: 15px;
       font-weight: 400;
@@ -9,9 +7,8 @@
   }
 
   &__show {
-        height: 55vh;
+    max-height: 55vh;
     overflow-y: scroll;
-
   }
 
   &__list {
@@ -19,14 +16,13 @@
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
-  
+
     &__images {
       display: flex;
       justify-content: space-between;
 
       img {
-      cursor: pointer;
-
+        cursor: pointer;
       }
     }
   }
@@ -47,8 +43,6 @@
     border: none;
     background-color: black;
     color: white;
-    cursor: pointer
+    cursor: pointer;
   }
-
-
 }

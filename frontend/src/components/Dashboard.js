@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import SetForm from "./SetForm";
 import "../css/Dashboard.scss";
 import ExerciseForm from "./ExerciseForm";
@@ -72,9 +72,9 @@ const Dashboard = (props) => {
                 <img  onClick={() => {
                       setOpen(true);
                       getSingleExercise(exercise);
-                    }} src={Edit} />
+                    }} src={Edit} alt="edit" />
 
-                <img onClick={() => deleteExercise(exercise.id)} src={Trash} />
+                <img onClick={() => deleteExercise(exercise.id)} src={Trash} alt="trash" />
                 </div>
               </div>
             );
@@ -98,6 +98,7 @@ const Dashboard = (props) => {
         </div>
       ) : (
         <div>
+          
           <ExerciseForm
             onChangeHandler={onChangeHandler}
             exercise={exercise}
@@ -105,10 +106,10 @@ const Dashboard = (props) => {
             getExercises={props.getExercises}
             isEdit={true}
           />
-          <h3 name="name">{exercise.name}</h3>
-          <p name="type">{exercise.type}</p>
+          
         </div>
       )}
+      
         </div>
       {open ? (
         <div className="dashboard__modal">

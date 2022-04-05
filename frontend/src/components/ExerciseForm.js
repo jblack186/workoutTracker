@@ -3,7 +3,6 @@ import "../css/Form.scss";
 import axios from "axios";
 
 function ExerciseForm(props) {
-  const [type, setType] = useState("");
   const [exercise, setExercise] = useState({
     name: !props.isEdit ? "" : props.exercise.name,
     type: !props.isEdit ? "" : props.exercise.type,
@@ -67,7 +66,7 @@ function ExerciseForm(props) {
 
   return (
     <div className="form-container">
-      <h3 className="form-container__header">{!props.isEdit ? "Create Exercise" : "Edit exercise"}</h3>
+      <h3 className="form-container__header">{!props.isEdit ? "Create Exercise" : `Edit ${props.isEdit && props.exercise && props.exercise.name} exercise`}<span> {props.isEdit && props.exercise && props.exercise.type.toLowerCase()}</span></h3>
       <p>{props.yes}</p>
       <form
         className="form"

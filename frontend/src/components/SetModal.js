@@ -46,7 +46,7 @@ const SetModal = (props) => {
 
   return (
     <div className="modal">
-      {isEdit ? <img onClick={() => setIsEdit(false)} src={Back} /> : null}
+      {isEdit ? <img onClick={() => setIsEdit(false)} src={Back} alt="arrow" /> : null}
       <h2 className="modal__header">
         {props.exercise && props.exercise.name}{" "}
         <span>{props.exercise && props.exercise.type}</span>
@@ -70,11 +70,11 @@ const SetModal = (props) => {
                 <p>Set#: {set.setCount}</p>
                 <div className="modal__list__images">
                    {!isEdit && props.set && props.set.length > 0 ? (
-                    <img src={Edit} onClick={() => editSet(set)} />
+                    <img src={Edit} onClick={() => editSet(set)} alt="edit" />
                   ) : (
-                    <img src={Plus} onClick={() => setIsEdit(false)} />
+                    <img src={Plus} onClick={() => setIsEdit(false)} alt="plus" />
                   )}
-                  <img src={Trash} onClick={() => deleteSet(set.id)} />
+                  <img src={Trash} onClick={() => deleteSet(set.id)} alt="trash" />
                 </div>
               </div>
             );

@@ -1,35 +1,36 @@
 .form {
-
-
   &__content {
-    
     display: flex;
     flex-direction: column;
 
-    &__input {
-
-    }
-
     input {
-     
       margin: 0 auto;
       margin-bottom: 10px;
       height: 20px;
-      
+
       border-radius: 5px;
       border: 1px solid gray;
     }
-  
-  
   }
-    button {
-      padding: 15px;
-      border-radius: 10px;
-      border: none;
-      background-color: black;
-      color: white;
-      cursor: pointer
-    }
+  button {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+}
 
 
+.edit-form {
+
+
+  &__text {
+    text-decoration: underline;
+  }
+
+  p {
+    cursor: pointer;
+  }
 }
