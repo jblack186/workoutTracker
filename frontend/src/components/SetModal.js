@@ -44,8 +44,15 @@ const SetModal = (props) => {
     }
   };
 
+  const goBack = () => {
+    props.setOpen(false)
+    setIsEdit(false)
+    props.setExercise(null)
+  }
+
   return (
     <div className="modal">
+      <strong><p onClick={goBack}>Close</p></strong>
       {isEdit ? <img onClick={() => setIsEdit(false)} src={Back} alt="arrow" /> : null}
       <h2 className="modal__header">
         {props.exercise && props.exercise.name}{" "}

@@ -57,6 +57,8 @@ const Dashboard = (props) => {
   return (
     <div className="dashboard">
       <div className="dashboard__list">
+
+
       {props.exercises
         ? props.exercises.map((exercise) => {
             return (
@@ -84,7 +86,7 @@ const Dashboard = (props) => {
       {!exercise ? (
         <div>
           <SetForm
-            yes={"yes"}
+           
             timed={timed}
             reps={reps}
             onChangeHandler={onChangeHandler}
@@ -94,6 +96,7 @@ const Dashboard = (props) => {
             onChangeHandler={onChangeHandler}
             getExercises={props.getExercises}
             isEdit={false}
+            
           />
         </div>
       ) : (
@@ -113,7 +116,7 @@ const Dashboard = (props) => {
         </div>
       {open ? (
         <div className="dashboard__modal">
-          <SetModal setSetData={setSetData} exercise={exercise} set={set} />
+          <SetModal setOpen={setOpen} setSetData={setSetData} exercise={exercise} setExercise={setExercise} set={set} />
         </div>
       ) : null}
     </div>

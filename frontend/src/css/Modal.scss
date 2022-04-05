@@ -6,6 +6,11 @@
     }
   }
 
+  strong {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
   &__show {
     max-height: 55vh;
     overflow-y: scroll;

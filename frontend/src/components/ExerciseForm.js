@@ -13,7 +13,6 @@ function ExerciseForm(props) {
     setExercise({ ...props.exercise });
   }, [props]);
 
-
   const exerciseOnChangeHandler = async (e) => {
     if (e.target.name === "type") {
       setExercise({ ...exercise, type: e.target.value });
@@ -91,6 +90,7 @@ function ExerciseForm(props) {
         <p>{exercise.type ? exercise.type : "Select type of exercise"}</p>
         <button type="submit">Submit</button>
       </form>
+      
     </div>
   );
 }
