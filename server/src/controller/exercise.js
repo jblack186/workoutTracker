@@ -6,7 +6,6 @@ const exerciseController = {
   create: async (exercise) => {
     const exerciseRepository = getRepository(Exercise);
 
-    console.log("Exercise", exercise);
     try {
       let newExercise = await exerciseRepository
         .createQueryBuilder()

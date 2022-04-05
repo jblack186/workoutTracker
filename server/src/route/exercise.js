@@ -4,7 +4,6 @@ import { setsController } from "../controller/sets.js";
 var exerciseRouter = express.Router();
 
 exerciseRouter.post("/", async function (req, res, next) {
-  console.log("nope", await req.body);
 
   try {
     //request body
@@ -70,7 +69,6 @@ exerciseRouter.delete("/:id", async function (req, res) {
 //loop through those sets and delete them one by one
   for (let i = 0; i < sets.length; i++) {
     let currSet = await sets[i];
-    console.log("curr", currSet);
     await setsController.delete(currSet.id);
   }
 
@@ -90,7 +88,6 @@ exerciseRouter.delete("/:id", async function (req, res) {
   } else {
     res.status(400).json({ message: "Failed to delete exercise" });
   }
-  console.log("Deleted", exercise);
 });
 
 export { exerciseRouter };

@@ -7,7 +7,6 @@ const setsController = {
   create: async (sets) => {
     const setsRepository = getRepository(Sets);
 
-    console.log("Sets", sets);
     try {
       let newSets = await setsRepository
         .createQueryBuilder()
@@ -16,9 +15,7 @@ const setsController = {
         .values(sets)
         .execute();
         const id = await newSets.identifiers[0].id
-        console.log('ID', id)
         const exercise = await exerciseController.read(sets.exercise_id)
-        console.log('10',exercise)
       return exercise;
     } catch {
       return false;
@@ -125,7 +122,6 @@ const setsController = {
           id: id,
         })
         .execute();
-        console.log('new sets', sets)
       return exercise;
     } catch (err) {
       console.log("Error at read sets", err);
